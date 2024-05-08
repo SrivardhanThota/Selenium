@@ -6,17 +6,19 @@ import random
 import pytest
 from datetime import datetime
 from pages.Register import Register
+from utilities.customLogger import LogGen
 # from .conftest import setup
 
 class Test_Register:
 
     url = "http://localhost/opencart/upload/index.php?route=account/register&language=en-gb"
     firstname = "Thota"
-    lastname = "Srivardhan"
+    lastname = "Sreevardhan"
     password = "Thota@7680"
-    email = "srivardhanthota.marolix@gmail.com"
-
+    email = "srivardhanthota.maroli@gmail.com"
+    logger = LogGen.loggen()
     def test_register_with_mandatory_fiels(self,setup):
+        self.logger.info("******Registering******")
         self.driver = setup
         self.driver.get(self.url)
         self.rg = Register(self.driver)

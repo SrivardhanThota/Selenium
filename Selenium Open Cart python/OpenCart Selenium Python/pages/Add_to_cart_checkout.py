@@ -61,6 +61,7 @@ class Add_to_cart_checkout:
     def setLastname(self,lastname):
         self.driver.find_element(By.ID,self.txt_box_lastname_id).clear()
         self.driver.find_element(By.ID,self.txt_box_lastname_id).send_keys(lastname)
+
     def setAddress(self,address):
         self.driver.find_element(By.ID,self.txt_box_address_id).clear()
         self.driver.find_element(By.ID,self.txt_box_address_id).send_keys(address)
