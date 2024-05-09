@@ -4,7 +4,6 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.select import Select
 
 @pytest.mark.sanity
-
 class Add_to_cart_checkout:
 
     txt_search_box_xpath = "//div[@id='search']/input"
