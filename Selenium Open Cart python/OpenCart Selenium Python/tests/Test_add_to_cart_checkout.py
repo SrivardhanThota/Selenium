@@ -84,6 +84,23 @@ class Test_to_add_to_cart_checkout:
         time.sleep(3)
         self.addcart.clickContinue()
         time.sleep(2)
+        self.addcart.clickChooseShipping()
+        time.sleep(2)
+        self.addcart.clickradio()
+        time.sleep(2)
+        self.addcart.continueclick()
+        time.sleep(2)
+        self.addcart.choosepayment()
+        time.sleep(2)
+        self.addcart.cashondelivery()
+        time.sleep(3)
+        self.addcart.continuecashondelivery()
+        time.sleep(2)
+        self.addcart.confirmorder()
+        time.sleep(2)
+
+
+
 
 
 

@@ -23,6 +23,17 @@ class Add_to_cart_checkout:
     dropdown_state_id = "input-shipping-zone"
     btn_continue_xpath = "//button[@id='button-shipping-address']"
 
+    # Shipping Method
+    btn_choose_xpath = "//button[@id='button-shipping-methods']"
+    rd_shippingrate_xpath = "//input[@id='input-shipping-method-flat-flat']"
+    continue_xpath = "//button[@id='button-shipping-method']"
+
+    # Payment Method
+    choosepayment_xpath = "//button[@id='button-payment-methods']"
+    rd_cash_on_delivery_xpath = "//input[@id='input-payment-method-cod-cod']"
+    btn_cash_continue_xpath = "//button[@id='button-payment-method']"
+    btn_confirm_order_xpath = "//button[@id='button-confirm']"
+
     def __init__(self,driver):
         self.driver = driver
 
@@ -83,6 +94,36 @@ class Add_to_cart_checkout:
 
     def clickContinue(self):
         self.driver.find_element(By.XPATH,self.btn_continue_xpath).click()
+
+    # Shipping Method
+
+    def clickChooseShipping(self):
+        choose = self.driver.find_element(By.XPATH,self.btn_choose_xpath)
+        self.driver.execute_script("arguments[0].click();", choose)
+
+    def clickradio(self):
+        self.driver.find_element(By.XPATH,self.rd_shippingrate_xpath).click()
+
+    def continueclick(self):
+        self.driver.find_element(By.XPATH,self.continue_xpath).click()
+
+    def choosepayment(self):
+        payment = self.driver.find_element(By.XPATH,self.choosepayment_xpath)
+        self.driver.execute_script("arguments[0].click();", payment)
+
+    def cashondelivery(self):
+        self.driver.find_element(By.XPATH,self.rd_cash_on_delivery_xpath).click()
+        # self.driver.execute_script("arguments[0].click();", rd)
+
+    def continuecashondelivery(self):
+
+        cashcon = self.driver.find_element(By.XPATH,self.btn_cash_continue_xpath)
+        self.driver.execute_script("arguments[0].click();",cashcon)
+
+    def confirmorder(self):
+        self.driver.find_element(By.XPATH,self.btn_confirm_order_xpath).click()
+
+
 
 
 
