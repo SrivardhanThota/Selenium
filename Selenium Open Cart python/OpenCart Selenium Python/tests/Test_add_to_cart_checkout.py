@@ -63,7 +63,7 @@ class Test_to_add_to_cart_checkout:
         self.addcart.addtoCart()
         time.sleep(5)
         self.addcart.itemcheckout()
-        time.sleep(2)
+        time.sleep(3)
         self.addcart.checkOut()
         time.sleep(2)
         self.addcart.clickonNewcust()
